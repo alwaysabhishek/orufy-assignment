@@ -1,0 +1,248 @@
+/* About Hero */
+.about-hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+    text-align: center;
+}
+
+.about-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.about-hero-title {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.about-hero-description {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Story Section */
+.story-content {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+}
+
+.story-image img {
+    width: 100%;
+    border-radius: 16px;
+    box-shadow: var(--shadow-xl);
+}
+
+.story-text .section-subtitle {
+    display: block;
+    margin-bottom: 10px;
+}
+
+.story-text .section-title {
+    text-align: left;
+    margin-bottom: 20px;
+}
+
+.story-text p {
+    color: var(--text-light);
+    margin-bottom: 15px;
+    line-height: 1.7;
+}
+
+.story-stats {
+    display: flex;
+    gap: 40px;
+    margin-top: 30px;
+}
+
+.story-stat {
+    text-align: center;
+}
+
+.story-stat .stat-number {
+    display: block;
+    font-size: 36px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.story-stat .stat-label {
+    font-size: 14px;
+    color: var(--text-light);
+}
+
+/* Values Section */
+.values-section {
+    background: white;
+}
+
+.value-card {
+    text-align: center;
+}
+
+.value-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    color: white;
+}
+
+.value-title {
+    font-size: 18px;
+    font-weight: 600;
+    margin-bottom: 10px;
+    color: var(--text-dark);
+}
+
+.value-description {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Team Section */
+.team-section.bg-light {
+    background: var(--bg-light);
+}
+
+.team-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.team-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-xl);
+}
+
+.team-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.team-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.team-card:hover .team-image img {
+    transform: scale(1.05);
+}
+
+.team-social {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: linear-gradient(transparent, rgba(0, 0, 0, 0.7));
+    padding: 30px 20px 15px;
+    display: flex;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: var(--transition);
+}
+
+.team-card:hover .team-social {
+    opacity: 1;
+    transform: translateY(0);
+}
+
+.team-social a {
+    width: 36px;
+    height: 36px;
+    background: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--primary-color);
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.team-social a:hover {
+    background: var(--primary-color);
+    color: white;
+}
+
+.team-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.team-name {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 5px;
+}
+
+.team-role {
+    color: var(--primary-color);
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 10px;
+}
+
+.team-bio {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .about-hero-title {
+        font-size: 36px;
+    }
+    
+    .story-content {
+        grid-template-columns: 1fr;
+    }
+    
+    .story-text .section-title {
+        text-align: center;
+    }
+    
+    .story-text p {
+        text-align: center;
+    }
+    
+    .story-stats {
+        justify-content: center;
+    }
+}
+
+@media (max-width: 768px) {
+    .about-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .about-hero-title {
+        font-size: 28px;
+    }
+    
+    .story-stats {
+        flex-wrap: wrap;
+        gap: 25px;
+    }
+}

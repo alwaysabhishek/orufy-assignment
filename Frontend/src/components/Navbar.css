@@ -1,0 +1,120 @@
+.navbar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    background: white;
+    box-shadow: var(--shadow-sm);
+    z-index: 1000;
+    padding: 15px 0;
+}
+
+.navbar-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.navbar-logo {
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+}
+
+.logo-text {
+    font-size: 28px;
+    font-weight: 800;
+    color: var(--primary-color);
+    letter-spacing: -1px;
+}
+
+.navbar-menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+    list-style: none;
+}
+
+.navbar-link {
+    text-decoration: none;
+    color: var(--text-dark);
+    font-weight: 500;
+    font-size: 15px;
+    transition: var(--transition);
+    position: relative;
+}
+
+.navbar-link:hover,
+.navbar-link.active {
+    color: var(--primary-color);
+}
+
+.navbar-link::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 0;
+    width: 0;
+    height: 2px;
+    background: var(--primary-color);
+    transition: var(--transition);
+}
+
+.navbar-link:hover::after,
+.navbar-link.active::after {
+    width: 100%;
+}
+
+.navbar-toggle {
+    display: none;
+    background: none;
+    border: none;
+    font-size: 24px;
+    color: var(--text-dark);
+    cursor: pointer;
+}
+
+.navbar-cta {
+    margin-left: 20px;
+}
+
+.navbar-cta .btn {
+    padding: 10px 24px;
+    font-size: 14px;
+}
+
+/* Mobile Styles */
+@media (max-width: 768px) {
+    .navbar-toggle {
+        display: block;
+        z-index: 1001;
+    }
+
+    .navbar-menu {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 280px;
+        height: 100vh;
+        background: white;
+        flex-direction: column;
+        justify-content: center;
+        gap: 25px;
+        padding: 20px;
+        box-shadow: var(--shadow-xl);
+        transition: right 0.3s ease;
+    }
+
+    .navbar-menu.active {
+        right: 0;
+    }
+
+    .navbar-link {
+        font-size: 18px;
+    }
+
+    .navbar-cta {
+        margin-left: 0;
+        margin-top: 20px;
+    }
+}

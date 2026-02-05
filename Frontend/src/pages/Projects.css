@@ -1,0 +1,213 @@
+/* Projects Hero */
+.projects-hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+    text-align: center;
+}
+
+.projects-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.projects-hero-title {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.projects-hero-description {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Projects Filter */
+.projects-section {
+    background: white;
+}
+
+.projects-filter {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 15px;
+    margin-bottom: 40px;
+}
+
+.filter-btn {
+    padding: 10px 24px;
+    border: 2px solid var(--border-color);
+    background: white;
+    border-radius: 30px;
+    font-size: 14px;
+    font-weight: 500;
+    color: var(--text-light);
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+.filter-btn:hover {
+    border-color: var(--primary-color);
+    color: var(--primary-color);
+}
+
+.filter-btn.active {
+    background: var(--primary-color);
+    border-color: var(--primary-color);
+    color: white;
+}
+
+/* Projects Grid */
+.projects-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.project-detail-card {
+    background: white;
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--shadow-md);
+    transition: var(--transition);
+}
+
+.project-detail-card:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-xl);
+}
+
+.project-detail-image {
+    position: relative;
+    height: 250px;
+    overflow: hidden;
+}
+
+.project-detail-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: var(--transition);
+}
+
+.project-detail-card:hover .project-detail-image img {
+    transform: scale(1.1);
+}
+
+.project-detail-overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(79, 70, 229, 0.9);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    gap: 15px;
+    opacity: 0;
+    transition: var(--transition);
+}
+
+.project-detail-card:hover .project-detail-overlay {
+    opacity: 1;
+}
+
+.project-detail-category {
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    text-transform: capitalize;
+    padding: 5px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    border-radius: 20px;
+}
+
+.project-view-btn {
+    padding: 12px 28px;
+    background: white;
+    color: var(--primary-color);
+    border-radius: 8px;
+    text-decoration: none;
+    font-weight: 600;
+    transition: var(--transition);
+}
+
+.project-view-btn:hover {
+    background: var(--text-dark);
+    color: white;
+}
+
+.project-detail-content {
+    padding: 25px;
+}
+
+.project-detail-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.project-detail-description {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 15px;
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.project-detail-tech {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 8px;
+}
+
+.tech-badge {
+    background: var(--bg-light);
+    color: var(--text-light);
+    padding: 5px 12px;
+    border-radius: 6px;
+    font-size: 13px;
+    font-weight: 500;
+}
+
+.no-projects {
+    text-align: center;
+    padding: 60px 20px;
+    color: var(--text-light);
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .projects-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (max-width: 768px) {
+    .projects-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .projects-hero-title {
+        font-size: 32px;
+    }
+    
+    .projects-filter {
+        gap: 10px;
+    }
+    
+    .filter-btn {
+        padding: 8px 18px;
+        font-size: 13px;
+    }
+    
+    .projects-grid {
+        grid-template-columns: 1fr;
+    }
+}

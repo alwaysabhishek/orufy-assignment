@@ -1,0 +1,245 @@
+/* Services Hero */
+.services-hero {
+    padding: 140px 0 80px;
+    background: linear-gradient(135deg, #f5f7ff 0%, #ffffff 100%);
+    text-align: center;
+}
+
+.services-hero-content {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.services-hero-title {
+    font-size: 44px;
+    font-weight: 800;
+    color: var(--text-dark);
+    margin-bottom: 20px;
+    line-height: 1.2;
+}
+
+.services-hero-description {
+    font-size: 18px;
+    color: var(--text-light);
+    line-height: 1.7;
+}
+
+/* Services Grid */
+.services-grid-section {
+    background: white;
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 30px;
+}
+
+.service-detail-card {
+    background: white;
+    border: 1px solid var(--border-color);
+    border-radius: 16px;
+    padding: 30px;
+    transition: var(--transition);
+}
+
+.service-detail-card:hover {
+    border-color: var(--primary-color);
+    box-shadow: var(--shadow-lg);
+    transform: translateY(-5px);
+}
+
+.service-detail-header {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-bottom: 20px;
+}
+
+.service-detail-icon {
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-light));
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-shrink: 0;
+}
+
+.service-detail-icon i {
+    font-size: 24px;
+    color: white;
+}
+
+.service-detail-title {
+    font-size: 20px;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.service-detail-description {
+    color: var(--text-light);
+    font-size: 15px;
+    line-height: 1.7;
+    margin-bottom: 20px;
+}
+
+.service-detail-features {
+    list-style: none;
+    margin-bottom: 20px;
+}
+
+.service-detail-features li {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 8px 0;
+    color: var(--text-light);
+    font-size: 14px;
+}
+
+.feature-check {
+    color: var(--secondary-color);
+    flex-shrink: 0;
+}
+
+.service-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    color: var(--primary-color);
+    font-weight: 600;
+    text-decoration: none;
+    transition: var(--transition);
+}
+
+.service-link:hover {
+    gap: 12px;
+}
+
+/* Process Section */
+.process-section.bg-light {
+    background: var(--bg-light);
+}
+
+.process-steps {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    position: relative;
+}
+
+.process-steps::before {
+    content: '';
+    position: absolute;
+    top: 40px;
+    left: 10%;
+    right: 10%;
+    height: 2px;
+    background: linear-gradient(to right, var(--primary-color), var(--primary-light));
+    z-index: 0;
+}
+
+.process-step {
+    text-align: center;
+    position: relative;
+    z-index: 1;
+}
+
+.step-number {
+    width: 80px;
+    height: 80px;
+    background: white;
+    border: 3px solid var(--primary-color);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 20px;
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--primary-color);
+}
+
+.step-title {
+    font-size: 18px;
+    font-weight: 600;
+    color: var(--text-dark);
+    margin-bottom: 10px;
+}
+
+.step-description {
+    color: var(--text-light);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Services CTA */
+.services-cta {
+    background: linear-gradient(135deg, var(--primary-color), var(--primary-dark));
+    padding: 80px 0;
+}
+
+.services-cta-content {
+    text-align: center;
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.services-cta-content h2 {
+    font-size: 36px;
+    font-weight: 700;
+    color: white;
+    margin-bottom: 15px;
+}
+
+.services-cta-content p {
+    font-size: 18px;
+    color: rgba(255, 255, 255, 0.9);
+    margin-bottom: 30px;
+}
+
+.services-cta-content .btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+}
+
+/* Responsive */
+@media (max-width: 992px) {
+    .services-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .process-steps {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .process-steps::before {
+        display: none;
+    }
+}
+
+@media (max-width: 768px) {
+    .services-hero {
+        padding: 120px 0 60px;
+    }
+    
+    .services-hero-title {
+        font-size: 32px;
+    }
+    
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .process-steps {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .services-cta-content h2 {
+        font-size: 28px;
+    }
+}
