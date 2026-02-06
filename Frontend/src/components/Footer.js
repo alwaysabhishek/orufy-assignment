@@ -76,8 +76,8 @@ const Footer = () => {
                 <div className="footer-bottom">
                     <p>&copy; {currentYear} Orufy. All rights reserved.</p>
                     <div className="footer-bottom-links">
-                        <a href="#">Privacy Policy</a>
-                        <a href="#">Terms of Service</a>
+                        <span style={{cursor: 'pointer'}}>Privacy Policy</span>
+                        <span style={{cursor: 'pointer'}}>Terms of Service</span>
                     </div>
                 </div>
             </div>
