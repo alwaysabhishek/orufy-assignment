@@ -7,7 +7,7 @@ const app = express();
 
 // Middleware
 app.use(cors({
-    origin: process.env.FRONTEND_URL || '*',
+    origin: ['https://orufy-assignment-nine.vercel.app', 'http://localhost:3000'],
     credentials: true
 }));
 app.use(express.json());
